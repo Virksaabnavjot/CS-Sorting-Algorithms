@@ -7,6 +7,8 @@ public class RecursionAndIterationExample{
 
     System.out.println("Answer: "+iterativeFactorialUsingForLoop(6));
 
+    System.out.println("Answer: "+iterativeFactorialUsingWhileLoop(4));
+
   }//main method
 
   public static void recursiveFactorial(int number){
@@ -26,6 +28,25 @@ public class RecursionAndIterationExample{
 
 
    return factorial;
-  }//iterative method
+ }//iterative method - for loop
+
+  public static int iterativeFactorialUsingWhileLoop(int number){
+
+    int factorial = 1;
+    int stepCount = 0;
+    int n = number;
+
+    System.out.println("Factorial of: "+number+ "!");
+    int i = 1;
+    while(i <= number){
+      factorial = factorial * n;
+      stepCount++;
+      i++;
+      System.out.println("Step: "+(stepCount)+" ---> "+factorial+ " = " +factorial+ " * " +(n-1)+"!");
+    }//end of while loop
+
+    return factorial;
+
+  }//iterative method - while loop
 
 }//end of class
