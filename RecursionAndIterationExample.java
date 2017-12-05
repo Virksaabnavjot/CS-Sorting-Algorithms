@@ -9,9 +9,20 @@ public class RecursionAndIterationExample{
 
     System.out.println("Answer: "+iterativeFactorialUsingWhileLoop(4));
 
+    System.out.println("Answer: "+recursiveFactorial(56));
+
   }//main method
 
-  public static void recursiveFactorial(int number){
+  public static long recursiveFactorial(int number){
+
+    if(number == 1){
+      return 1;
+    }else{
+      //System.out.println(number * recursiveFactorial(number-1));
+      return (number * recursiveFactorial(number-1));
+
+    }
+
 
   }//recursive method/function
 
